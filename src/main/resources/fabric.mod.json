@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "test-mod",
+	"version": "${version}",
+	"name": "Test Mod",
+	"description": "Test Mod",
+	"authors": [
+		"Exizal"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/test-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"exizal.testmod.TestMod"
+		],
+		"fabric-datagen": [
+			"exizal.testmod.TestModDataGenerator"
+		],
+		"client": [
+			"exizal.testmod.TestModClient"
+		]
+	},
+	"mixins": [
+		"test-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
